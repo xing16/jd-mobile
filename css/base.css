@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*清除点击背景高亮*/
+    -webkit-tap-highlight-color: transparent;
+    /*所有盒子宽高以边框开始计算，使用百分比布局，避免溢出*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #322;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.clear {
+    /*visibility: hidden;*/
+    clear: both;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.right_border {
+    border-right: 1px solid #e0e0e0;
+}
+
+.bottom_border {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

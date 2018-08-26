@@ -1,0 +1,381 @@
+body {
+    background: #f4f5f6;
+}
+
+.jd_layout {
+    margin: 0 auto;
+    width: 100%;
+    height: 1000px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+/*  --------搜索框 header ------ */
+.jd_header {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /*fixed 定位是相对于最外层 window 进行定位的*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*被banner盖住了，使用 z-index 提高显示层级*/
+    z-index: 1000;
+}
+
+.jd_header > .jd_header_box {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    background: rgba(214, 50, 28, 0);
+    position: relative;
+}
+
+.jd_header > .jd_header_box > .jd_header_box_logo {
+    position: absolute;
+    left: 5px;
+    top: 0;
+}
+
+.jd_header > .jd_header_box > a > .icon_logo {
+    width: 40px;
+    height: 40px;
+}
+
+.jd_header > .jd_header_box > .jd_login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.jd_header > .jd_header_box > form {
+    width: 100%;
+    line-height: 40px;
+    padding-left: 50px;
+    padding-right: 45px;
+    position: relative;
+}
+
+.jd_header > .jd_header_box > form > input {
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #eee;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-top: -4px;
+    padding-left: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.jd_header > .jd_header_box > form > .icon_search {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    position: absolute;
+    top: 12.5px;
+    left: 60px;
+    background: url("../img/search.png") no-repeat;
+    background-size: 15px;
+
+}
+
+/* ----- banner----- */
+.jd_banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/*banner 下的第一个 ul*/
+.jd_banner > ul:first-child {
+    width: 1000%;
+    overflow: hidden;
+}
+
+.jd_banner > ul:first-child > li {
+    width: 10%;
+    float: left;
+    /* 向左移动自己宽度的100%,即显示第 0 张图片 */
+    transform: translateX(-100%);
+}
+
+.jd_banner > ul:first-child > li > a {
+    width: 100%;
+    display: block;
+}
+
+.jd_banner > ul:first-child > li > a > img {
+    width: 100%;
+    display: block;
+}
+
+/*banner 下的第二个 ul*/
+.jd_banner > ul:nth-child(2) {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.jd_banner > ul:nth-child(2) > li {
+    float: left;
+    width: 5px;
+    height: 5px;
+    margin-left: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.jd_banner > ul:nth-child(2) > li:first-child {
+    margin-left: 0;
+}
+
+.jd_banner > ul:nth-child(2) > .banner_now {
+    background: white;
+}
+
+/*导航栏*/
+.nav {
+    width: 100%;
+    background: white;
+}
+
+/* li 都是左浮动，所以需要清除浮动 */
+.nav > ul:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.nav > ul > li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav > ul > li > a {
+    display: block;
+}
+
+.nav > ul > li > a > div > img {
+    display: block;
+    width: 40px;
+    /*margin: 20px auto 5px;*/
+    margin: 0 auto;
+}
+
+/* ------热门推荐区------ */
+.hot_goods {
+    width: 100%;
+}
+
+.hot_goods > .hot_goods_box {
+    width: 100%;
+}
+
+/* 第一个秒杀区没有header */
+.hot_goods > .hot_goods_box:first-child {
+    margin-top: 10px;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content {
+    width: 100%;
+    background: white;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_box_header > img {
+    width: 100%;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content > .hot_goods_title {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content > .no_border {
+    border: none;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content > .hot_goods_title > h3 {
+    font-weight: normal;
+    font-size: 14px;
+    margin-left: 20px;
+    float: left;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content > .hot_goods_title > .goods_leave_time {
+    float: left;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content > .hot_goods_title > .goods_leave_time > span.goods_leave_time_num {
+    background: #d6321c;
+    line-height: 30px;
+    color: #eee;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content > .hot_goods_title > p {
+    float: right;
+    font-size: 14px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+
+.hot_goods > .hot_goods_box > .hot_goods_main_content > .hot_goods_title > h3:before {
+    content: "";
+    width: 5px;
+    height: 15px;
+    display: block;
+    background-color: #d6321c;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+}
+
+/* 秒杀抢购区 */
+
+.hot_goods_content {
+    width: 100%;
+}
+
+/* 秒杀区4个秒杀商品上下添加padding */
+.hot_goods > .hot_goods_box:first-child > .hot_goods_main_content > .hot_goods_content {
+    padding: 10px 0;
+    /*display: block;*/
+}
+
+.hot_goods_content > .hot_goods_content_box {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+/* 秒杀区4个秒杀商品是左浮动的，因此需要清除浮动 */
+.hot_goods_content:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.hot_goods_content > .hot_goods_content_box > a {
+    display: block;
+}
+
+.hot_goods_content > .hot_goods_content_box > a > img {
+    height: 60px;
+}
+
+.hot_goods_content > .hot_goods_content_box > a > p:nth-child(2) {
+    font-size: 20px;
+    color: #d6321c;
+}
+
+.hot_goods_content > .hot_goods_content_box > a > p:nth-child(3) {
+    text-decoration-line: line-through;
+}
+
+/* 占屏幕一半的元素 */
+.hot_goods_content > .hot_goods_w50 {
+    width: 50%;
+    height: 110px;
+    position: relative;
+    float: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 占屏幕一半宽度的元素，当顺序为奇数时才加右边框 */
+.hot_goods_content > .hot_goods_w50:nth-child(odd) {
+    border-right: 1px solid #e0e0e0;
+}
+
+/* 占屏幕一半的元素中的子元素左绝对定位 */
+.hot_goods_content > .hot_goods_w50 > .hot_goods_w50_left {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.hot_goods_content > .hot_goods_w50 > .hot_goods_w50_left > p:last-child {
+    font-size: 12px;
+    color: #D663E1;
+}
+
+/* 占屏幕一半的元素中的子元素右绝对定位 */
+.hot_goods_content > .hot_goods_w50 > .hot_goods_w50_right {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.hot_goods_content > .hot_goods_w50 > .hot_goods_w50_right > img {
+    height: 80px;
+}
+
+.hot_goods_content > .hot_goods_w25 {
+    width: 25%;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 占屏幕 25% 的元素，顺序为 4 的倍数才不加右边框 */
+.hot_goods_content > .hot_goods_w25:nth-child(4n+4) {
+    border-right: none;
+}
+
+/* 占屏幕 25% 的元素,最后一行不加下边框 */
+.hot_goods_content > .hot_goods_w25:nth-last-child(4),
+.hot_goods_content > .hot_goods_w25:nth-last-child(3),
+.hot_goods_content > .hot_goods_w25:nth-last-child(2),
+.hot_goods_content > .hot_goods_w25:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.hot_goods_content > .hot_goods_w25 > .hot_goods_w25_top {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.hot_goods_content > .hot_goods_w25 > .hot_goods_w25_top > p:last-child {
+    font-size: 12px;
+    color: #D663E1;
+}
+
+.hot_goods_content > .hot_goods_w25 > .hot_goods_w25_bottom {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.hot_goods_content > .hot_goods_w25 > .hot_goods_w25_bottom > img {
+    height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
