@@ -5,7 +5,7 @@
 <h3>最大宽度显示效果：</h3>
 <img src="https://github.com/xing16/jd-mobile/raw/master/result/max-width.png" >
 
-<h3>手机闲显示效果：</h3>
+<h3>手机显示效果：</h3>
 
 <img src="https://github.com/xing16/jd-mobile/raw/master/result/mobile.png" >
 
